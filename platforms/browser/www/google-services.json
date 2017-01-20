@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1009966193418",
+    "firebase_url": "https://thesiscapstone-853ad.firebaseio.com",
+    "project_id": "thesiscapstone-853ad",
+    "storage_bucket": "thesiscapstone-853ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1009966193418:android:7315e532c3678cbc",
+        "android_client_info": {
+          "package_name": "com.MERSY.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1009966193418-02rl9174fd007bs4ln3v1dqd5m99g31p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh2Az5ZZPibGRiXW5HE_Y1z-3jlNElGT4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

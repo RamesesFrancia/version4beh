@@ -1,0 +1,66 @@
+<hmtl>
+<head>
+	<link rel="stylesheet" href="design.css"/>
+</head>
+<a href="index.html">
+	<header>
+		<img src="images/logo.jpg" width="100%" height="11%" style="float">
+	</header>
+</a>
+
+<body style="margin:0px">
+</body>
+
+<!--For Geolocation-->
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+
+<!--For phone call plugin-->
+	<script type="text/javascript" src="/PhoneNumbers/jquery.PhoneNumbers.min.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+
+<script>
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (p) {
+        var LatLng = new google.maps.LatLng(p.coords.latitude, p.coords.longitude);
+        var mapOptions = {
+            center: LatLng,
+            zoom: 10,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+        var marker = new google.maps.Marker({
+            position: LatLng,
+            map: map,
+            title: "<div style = 'height:60px;width:200px'><b>Your location:</b><br />Latitude: " + p.coords.latitude + "<br />Longitude: " + p.coords.longitude
+        });
+        google.maps.event.addListener(marker, "click", function (e) {
+            var infoWindow = new google.maps.InfoWindow();
+            infoWindow.setContent(marker.title);
+            infoWindow.open(map, marker);
+        });
+    });
+} else {
+    alert('Geo Location feature is not supported in this Device.');
+}
+
+
+</script>
+<center><div id="dvMap" style="width: 100%; height: 78%" alt="Map Will Go here, /b Internet Connection is needed" ></center>
+</div>
+<nav class="fixed-nav-bar">
+<center>
+	<a rel="external" href="tel:+639982567705" onclick="window.open('tel:+639982567705', '_system');" >
+		<img src="images/EMS.png" width="25%" height="70px"/></img></a>
+			
+	<a rel="external" href="tel:+639987654321"  onclick="window.open('tel:+639987654321', '_system');">
+		<img src="images/Fire.png" width="25%" height="70px"/></img></a>
+		
+	<a rel="external" href="tel:+639982567705" onclick="window.open('tel:+639982567705', '_system');" >
+		<img src="images/police.png" width="25%" height="70px"/></img></a>
+		
+	<a href="index.html"><img src="images/home.png" width="70px" height="70px"/></a>
+</center>
+</nav>
+</body>
+</hmtl>
